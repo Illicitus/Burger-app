@@ -4,6 +4,7 @@ import axios from '../../../axios-orders';
 import Button from '../../../components/UI/Button/Button';
 import Spinner from '../../../components/UI/Spinner/Spinner';
 import Input from '../../../components/UI/Input/Input';
+import withErrorHandler from '../../../hoc/withErrorHandler/withErrorHandler';
 
 import classes from './ContactData.css';
 
@@ -137,4 +138,4 @@ class ContactData extends Component {
     }
 }
 
-export default ContactData;
+export default withErrorHandler(ContactData, axios);
