@@ -26,3 +26,8 @@
     background-color: #ccc;
     z-index: 1;
 }
+
+.Invalid {
+    border: 1px solid red;
+    background-color: rgba(195, 53, 97, 0.66);
+}
