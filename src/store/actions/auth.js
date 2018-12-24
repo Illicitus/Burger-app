@@ -55,7 +55,7 @@ export const auth = (email, password, isSingUp) => {
         axios.post(url, authData)
             .then(response => {
                 dispatch(authSuccess(response.data.idToken, response.data.localId));
-                dispatch(checkAuthTimeout(response.data.exripersIn))
+                dispatch(checkAuthTimeout(response.data.expiresIn))
             })
             .catch(error => {
                 dispatch(authFail(error.response.data.error))
